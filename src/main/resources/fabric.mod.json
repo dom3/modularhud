@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "modularhud",
+	"version": "${version}",
+	"name": "Modular Hud",
+	"description": "A modular hud mod",
+	"authors": [
+		"domohyes"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/toddmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.modhud.ModularHud"
+		],
+		"client": [
+			"com.modhud.ModularHudClient"
+		]
+	},
+	"mixins": [
+		"modhud.mixins.json",
+		{
+			"config": "modhud.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*",
+		"yet_another_config_lib_v3": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
